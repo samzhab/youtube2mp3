@@ -5,6 +5,8 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     ast (2.4.0)
     byebug (10.0.2)
+    csv (3.0.0)
+    date (1.0.0)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     http-cookie (1.0.3)
@@ -45,6 +47,8 @@ PLATFORMS
 DEPENDENCIES
   addressable (~> 2.5.2)
   byebug
+  csv
+  date
   json (~> 2.1.0)
   rest-client
   rubocop (~> 0.51.0)
