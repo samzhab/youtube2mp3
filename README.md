@@ -19,6 +19,10 @@ eg. `$ rvm gemset create cryptology`
 `$ gem install bundler`
 * install necessary gems
 `$ bundle`
+* create a folder api_keys
+`$ mkdir api_keys`
+* create a folder csv_files
+`$ mkdir csv_files`
 * make scripts executable
 `$ chmod +x <script_name.rb>`
 * run script
