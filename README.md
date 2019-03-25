@@ -30,4 +30,4 @@ eg. `$ rvm gemset create cryptology`
 
 Further Development [coming soon...]
 * add various search filters such as publishDate etc...
-* integrate with youtube-dl to download youtube videos from saved url in one go
+* integrate with youtube-dl to download youtube videos from saved url in one go.
