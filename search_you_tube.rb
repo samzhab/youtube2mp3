@@ -22,13 +22,8 @@ class SearchYouTube
   def setup_query(query, youtube_api_key)
     week = (DateTime.now - 7).strftime.split('+').first
     # yesterday = (DateTime.now - 1).strftime.split('+').first
-    # a_month_ago = (DateTime.now - 30).strftime.split('+').first
-    "https://www.googleapis.com/youtube/v3/search?q=#{query}
-                                                      &maxResults=25
-                                                      &part=snippet
-                                                      &publishedAfter=#{week}Z
-                                                      &key=#{youtube_api_key}"
-      .delete(' ').delete("\n")
+    "https://www.googleapis.com/youtube/v3/search?q=#{query}&maxResults=25&part=snippet&publishedAfter=#{week}&key=#{youtube_api_key}".delete(' ').delete("\n")
+    #"https://www.googleapis.com/youtube/v3/search?q=#{query}&maxResults=25&part=statistics&publishedAfter=#{week}&key=#{youtube_api_key}".delete(' ').delete("\n")
   end
 
   def ask_or_load_youtube_apikey
@@ -72,9 +67,8 @@ class SearchYouTube
   end
 
   def get_request(url, headers, payload)
-    response = RestClient::Request.execute(method: :get, url: Addressable::URI
-                                           .parse(url) .normalize.to_str,
-                                           headers: headers, payload: payload,
+    response = RestClient::Request.execute(method: :get, url: Addressable::URI.parse(url).normalize.to_str,headers: headers,
+                                           payload: payload,
                                            timeout: 50)
   rescue RestClient::Unauthorized, RestClient::Forbidden => err
     puts 'Access denied!'
