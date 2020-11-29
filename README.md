@@ -1,5 +1,5 @@
 ## youtube video to mp3 convert
-![temporary logo](https://s2.gifyu.com/images/Peek-2018-10-29-00-13.gif "get_my_news temporary logo")
+![temporary logo](https://bt-strike.s3-us-west-2.amazonaws.com/images/ruby.gif "get_my_news temporary logo")
 
 
 Searches youtube for a specific keyword based on some search filters provided and saves the resulting video urls as csv file locally.
